@@ -1,0 +1,17 @@
+2. The file JunitTest has a Test method, which proves if the String is equal to other String.
+The file JunitTestRun runs class JunitTest, shows the failures of the tests if any, and show the result of the test(true or false).
+
+3. a) The file ListTest.java has this structure, because it executes 2 Test methods to test how many elements are added to the list, and after each test the method After is implemented, so that list is cleared. I added one extra element in the list, and changed tests accordingly.
+   b) I changed file StringBuilderTest.java("String" to "String2") and changed expected result so that it works.
+   c) Fixtures implements a subclass of test case, which defines the fixture to run multiple tests. A test case is defined in this way:
+      implemented a subclass of TestCase
+      defined instance variables that store the state of the fixture
+      initialized the fixture state by overriding setUp()
+      Implemented a method which interacts with the fixture. Verified the expected results with assertions specified by calling Assert.assertTrue(String, boolean) with a boolean.
+
+4. The SuiteClasses annotation specifies the classes to be run when a class annotated with @RunWith(Suite.class) is run, which means that in this case it runs TestJunit1 and TestJunit2 classes.
+
+5. POM file is required by Maven to build the project, it contains information about dependencies, properties, version and etc.
+6. Junit requires 2 modules: JUnit Platform , JUnit Jupiter. So once we have these modules as dependencies we can import methods to run the tests. It offers different methods to perform tests in different ways, so that we should choose them according to our needs.
+
+
